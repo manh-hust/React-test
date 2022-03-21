@@ -1,51 +1,28 @@
-import {useStore, actions } from './Store'
-import {useRef} from 'react'
-
+import Header from "./Components/header";
 
 function App() {
+
+  const animals = [{
+    name: 'Dog'
+  },{
+    name: 'Cat'
+  }, {
+    name: 'Pig'
+  }]
   
-  const [state, dispatch] = useStore()
-  const { todos  , todoInput } = state
-
-  const inputRef = useRef()
-
-  function handleAdd(){
-    dispatch(actions.addTodoInput(todoInput))
-    dispatch(actions.setTodoInput(''))
-    inputRef.current.focus()
-  }
-  function handleDelete(index){
-    dispatch(actions.deleteTodoInput(index))
-  }
-  localStorage.setItem('todos', JSON.stringify(state.todos))
-
   return (
         <div>
-          <input
-            ref={inputRef}
-            value={todoInput}
-            placholder="Enter todo ..."
-            onChange={e => {
-                dispatch(actions.setTodoInput(e.target.value))
-            }}
-          />
-          <button onClick={handleAdd}>Add</button>
+          <Header text={'Cat'} message={'He'} src="https://youtube.com"/>
           <ul>
             {
-              todos.map((todo, index) => (
-                <li key={index}>
-                  {todo}
-                  <span style={{
-                      marginLeft: 20,
-                      cursor:'pointer'}}
-                      onClick={() =>handleDelete(index)}
-                  >x</span>
-                </li>
-              ))
+              animals.map((item, index) => 
+                  <li key={index}>{item.name}</li>
+              )
             }
           </ul>
         </div>
   );
 }
+
 
 export default App;
