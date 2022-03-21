@@ -1,0 +1,19 @@
+.header {
+    padding: 1rem 0;
+    font-size: 1.25rem;
+}
+
+.header__title {
+    font-weight: bold;
+}
+
+.header__link {
+    color: #000;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.header__link--active,
+.header__link:hover {
+    text-decoration: none;
+    color: rgb(35, 104, 182)
+}
