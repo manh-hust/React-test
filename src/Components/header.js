@@ -1,17 +1,21 @@
 import { Container } from "reactstrap"
 
 
-function Header (prop) {
-    const {text, src} = prop
-    console.log(prop)
-    return (
-        <Container>
-            <h1>
-            {text}
-            </h1>
-            <a href={src} target='_blank' rel="noreferrer">Youtube</a>
-        </Container>
-    )
+const Header = {
+     Header1 : () => {
+        return (
+            <Container>
+                <button>Header1</button>
+            </Container>
+        )
+    },
+     Header2 : () => {
+        return (
+            <Container>
+                <button>Header2</button>
+            </Container>
+        ) 
+    }
 }
 
 export default Header

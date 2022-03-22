@@ -1,5 +1,6 @@
 import { useState } from "react";
-
+import Button from "./Components/button";
+import Header from "./Components/header";
 
 function App() {
  
@@ -12,6 +13,8 @@ function App() {
   }
   return (
         <div style={{padding: 20}}>
+          <Header.Header1/>
+          <Header.Header2/>
          <input 
           value={item} 
           onChange={e => setItem(e.target.value)}/>
@@ -21,6 +24,12 @@ function App() {
              <li key={index}>{item}</li>
            ))}
          </ul>
+
+         <Button
+            title="Click me !"
+            href="https://fullstack.edu.vn"
+            onClick={() => console.log(Math.random())}
+         />
         </div>
   );
 }
