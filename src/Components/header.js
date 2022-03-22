@@ -1,14 +1,16 @@
+import { Container } from "reactstrap"
+
 
 function Header (prop) {
     const {text, src} = prop
     console.log(prop)
     return (
-        <div>
+        <Container>
             <h1>
             {text}
             </h1>
-            <a href={src} target='_blank'>Youtube</a>
-        </div>
+            <a href={src} target='_blank' rel="noreferrer">Youtube</a>
+        </Container>
     )
 }
 

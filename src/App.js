@@ -1,25 +1,15 @@
-import Header from "./Components/header";
+import { useState } from "react";
+
 
 function App() {
-
-  const animals = [{
-    name: 'Dog'
-  },{
-    name: 'Cat'
-  }, {
-    name: 'Pig'
-  }]
-  
+  const [name, setName] = useState('')
+  console.log(name)
   return (
-        <div>
-          <Header text={'Cat'} message={'He'} src="https://youtube.com"/>
-          <ul>
-            {
-              animals.map((item, index) => 
-                  <li key={index}>{item.name}</li>
-              )
-            }
-          </ul>
+        <div style={{padding: 20}}>
+          <input 
+            onChange={e => setName(e.target.value)}
+          >
+          </input>
         </div>
   );
 }
