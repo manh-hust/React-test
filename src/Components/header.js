@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react"
 import { Container } from "reactstrap"
 
 
@@ -10,9 +11,24 @@ const Header = {
         )
     },
      Header2 : () => {
+
+        const [width, setWidth] = useState(window.innerWidth)
+
+        useEffect(() => {
+
+            const handleResize = () => {
+                setWidth(window.innerWidth)
+            }
+
+            window.addEventListener('resize', handleResize)
+            return () => {
+            window.removeEventListener('resize', handleResize)
+            }    
+        },[])
+
         return (
             <Container>
-                <button>Header2</button>
+                <h1>{width}</h1>
             </Container>
         ) 
     }
