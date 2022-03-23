@@ -1,26 +1,19 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, memo } from "react"
 
 
-function Content() {
+function Content({onIncrease}) {
 
-    const[countdown, setCountdown] = useState(180)
-
-    useEffect(() => {
-        const timerId = setInterval(() => {
-            setCountdown(prev => prev - 1)
-        }, 1000)
-
-        return () => clearInterval(timerId)
-
-    },[])
+    console.log('re-render');
 
     return (
         <div>
             <h1>
-                {countdown}
+                Content
+                <br/>
+                <button onClick={onIncrease}>Increase</button>
             </h1>
         </div>
     )
 }
 
-export default Content
+export default memo(Content)
