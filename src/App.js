@@ -1,6 +1,6 @@
-import TodoApp from './Todo'
+// import TodoApp from './Todo'
 import { useStore, actions } from './store';
-import { useRef} from 'react'
+import { useRef, useEffect} from 'react'
 import Video from './Components/video';
 
 function App() {
@@ -9,7 +9,17 @@ function App() {
   const {todos ,todoInput } = state
 
   const refInput = useRef()
+  const videoRef = useRef()
 
+  const handlePlay = () => {
+    videoRef.current.play()
+  }
+
+  const handlePause = () => {
+    videoRef.current.pause()
+  }
+
+  
   const handleAdd = (todo) => {
     dispath(actions.addJob(todo))
     dispath(actions.setJob(''))
@@ -34,7 +44,9 @@ function App() {
           ))}
         </ul>
         <h1>Video</h1>
-        <Video/>
+        <Video ref={videoRef}/>
+        <button onClick={handlePlay}>Play</button>
+        <button onClick={handlePause}>Pause</button>
       </div>
   );
 }
