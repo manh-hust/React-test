@@ -1,7 +1,12 @@
 # useState
 
 # useEffect(function), (function, []), (function, [dep])
-
+- luôn thực hiện callback sau khi component mounted
+- cleanup function luôn được gọi trước khi component unmouted
+- return function cleanup tránh xảy ra memry leak
+- Call API
+- Timer
+- 
 # React.memo
 - Tránh render lại component con
 - Kiểm tra sự thay đổi của các prop
@@ -11,3 +16,7 @@
 - Sử dụng cùng React.memo
 # useMemo(function, [])
 
+# useReducer(reducer(function - switch.case), initState) = [state, dispath]
+- thay thế useState cho những tác vụ lớn hơn
+
+# useContext
