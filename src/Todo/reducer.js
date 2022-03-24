@@ -1,4 +1,4 @@
-import {SET, ADD, DELETE} from './const'
+import {SET, ADD, DELETE} from '../store/const'
 
 export const initState = {
     job: '',
