@@ -1,0 +1,7 @@
+ul > li {
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.item-hobby{
+    color: rgb(226, 17, 17);
+}

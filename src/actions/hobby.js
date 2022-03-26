@@ -5,3 +5,10 @@ export const addNewHobby = (hobby) => {
         payload: hobby
     }
 }
+
+export const selectedHobby = (hobby) => {
+    return {
+        type: "SELECT_ITEM",
+        payload: hobby
+    }
+}
