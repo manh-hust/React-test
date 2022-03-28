@@ -1,12 +1,10 @@
-import HomePage from "./pages/HomePage";
+import Navbar from "./Components/Navbar";
 
 function App() {
-  
-  
 
   return (
-      <div style={{padding: 20}}>
-        <HomePage/>
+      <div>
+        <Navbar/>
       </div>
   );
 }
