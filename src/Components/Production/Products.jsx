@@ -7,7 +7,7 @@ function Products() {
     const [data, setData] = useState([])
     const [filter, setFilter] = useState(data)
     const [loading, setLoading] = useState(true)
-
+    const [active, setActive] = useState('all')
     let componentMounted = true
 
     useEffect(() => {
@@ -53,6 +53,7 @@ function Products() {
     const filterProduct = (cat) => {
         const updateList = data.filter((x) => x.category === cat)
         setFilter(updateList)
+        setActive(cat)
     }
 
 
@@ -66,11 +67,11 @@ function Products() {
                         All 
                     </button>
                     <button className="btn btn-outline-dark me-2"
-                    onClick={() => filterProduct("men's Clothing")}    > 
+                    onClick={() => filterProduct("men's clothing")}    > 
                         Men's Clothing 
                     </button>
                     <button className="btn btn-outline-dark me-2"
-                    onClick={() => filterProduct("women's Clothing")}    > 
+                    onClick={() => filterProduct("women's clothing")}    > 
                         Women's Clothing 
                     </button>
                     <button className="btn btn-outline-dark me-2"
@@ -78,7 +79,7 @@ function Products() {
                         Jewelery Clothing 
                     </button>
                     <button className="btn btn-outline-dark me-2"
-                    onClick={() => filterProduct("electronic")}    > 
+                    onClick={() => filterProduct("electronics")}    > 
                         Electronic Clothing 
                     </button>
                 </div>
@@ -104,7 +105,7 @@ function Products() {
         <div className="container my-5 py-5">
             <div className="row">
                 <div className="col-12 mb-5">
-                    <h1 className="display-6 fw-bolder text-center">PRoducts</h1>
+                    <h1 className="display-6 fw-bolder text-center">Products</h1>
                     <hr />
                 </div>
             </div>

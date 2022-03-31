@@ -1,0 +1,32 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
+  transition: 0.25s all linear;
+  }
+.scroll-to-top:hover{
+  /* transform: rotate(720deg); */
+}
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+.icon-back-to-top{
+  padding: 12px;
+  margin: 0 8px 8px 0;
+  font-size: 2rem;
+  background-color: #212529;
+  color: #fff;
+  border-radius: 50%;
+  transition: 0.5s all linear;
+}  
+.icon-back-to-top:hover{
+  background-color: #9c9e9f;
+  transition: all 0.25s;
+}
