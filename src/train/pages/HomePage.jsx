@@ -1,7 +1,7 @@
 import { useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux"
-import { addNewHobby, selectedHobby } from "../actions/hobby";
-import HobbyList from "../Components/Home/HobbyList";
+import { addNewHobby, selectedHobby } from "../../actions/hobby";
+import HobbyList from "../../Components/Home/HobbyList";
 
 function HomePage() {
 

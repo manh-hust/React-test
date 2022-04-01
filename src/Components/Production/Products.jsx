@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import Skeleton from "react-loading-skeleton"
 import 'react-loading-skeleton/dist/skeleton.css'
+import { Link } from "react-router-dom"
 
 function Products() {
 
@@ -18,7 +19,6 @@ function Products() {
                 setData(await response.clone().json());
                 setFilter(await response.json());
                 setLoading(false);
-                console.log('Data: ',filter);
             }
 
             return () => {
@@ -85,13 +85,13 @@ function Products() {
                 </div>
                 {filter.map((item) => {
                     return (
-                        <div className="col-md-3 mb-4">
+                        <div className="col-xl-3 col-md-4 col-sm-6 mb-4">
                             <div class="card h-100 text-center p-4" key={item.id} >
                                 <img src={item.image} class="card-img-top" alt={item.title} height="250px"/>
                                     <div class="card-body">
                                         <h5 class="card-title mb-0">{item.title.substring(0, 12)}...</h5>
                                         <p class="card-text lead fw-bold">${item.price}</p>
-                                        <a href="#" class="btn btn-outline-dark">Go somewhere</a>
+                                        <Link to={`/products/${item.id}`} class="btn btn-outline-dark">Buy now</Link>
                                     </div>
                             </div>
                         </div>

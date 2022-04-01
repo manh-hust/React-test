@@ -1,7 +1,11 @@
 import React from 'react';
 import Products from './Products';
+import { useParams } from "react-router"
 
 function Home (){
+
+    const params=  useParams()
+    console.log(params);
 
     return (
         <div className="hero">
