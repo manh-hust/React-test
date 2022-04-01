@@ -1,11 +1,16 @@
-import {useSelector} from "react-redux"
+import {useSelector, useDispatch} from "react-redux"
+import { addCart, delCart } from "../../redux/action"
 
 function Cart () {
 
-    const cart = useSelector(state => state.handleCart)
+    const  cart = useSelector(state => state.handleCart)
+    const dispath = useDispatch()
 
-    const handleButton = () => {
-        return 0
+    const handleAddButton = (product) => {
+        dispath(addCart(product))
+    }
+    const handleDelButton = (product) => {
+        dispath(delCart(product))
     }
 
     return (
@@ -24,11 +29,11 @@ function Cart () {
                                 {product.qty * product.price}
                             </p>
                             <button className="btn btn-outline-dark me-4"
-                            onClick={() => handleButton(product)} >
+                            onClick={() => handleDelButton(product)} >
                                 <i className="fa fa-minus"></i>
                             </button>
                             <button className="btn btn-outline-dark me-4"
-                            onClick={() => handleButton(product)} >
+                            onClick={() => handleAddButton(product)} >
                                 <i className="fa fa-plus"></i>
                             </button>
                         </div>

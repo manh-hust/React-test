@@ -1,11 +1,9 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom'
 import {useSelector} from "react-redux"
 
 function Navbar() {
 
-    const params = useParams()
     const cart = useSelector(state => state.handleCart)
   
     return (

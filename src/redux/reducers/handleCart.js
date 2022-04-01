@@ -4,7 +4,9 @@ const cart = [];
 
 
 const handleCart =  (state = cart, action) => {
+
     const product = action.payload;
+    
     switch(action.type) {
         case ADD_ITEM :
             const exits = state.find(x => x.id === product.id)
@@ -23,21 +25,17 @@ const handleCart =  (state = cart, action) => {
                 ]
             }
 
-            break;
-
         case DEL_ITEM :
-            const exit1 = state.find(x => x.id === product.id)
-            if(exits.qty === 1){
-                return state.filter(x => x.id !== exit1.id)
+            const exits1 = state.find(x => x.id === product.id)
+
+            if(exits1.qty === 1){
+                return state.filter(x => x.id !== exits1.id)
             }
             else{
                 return state.map(item => {
                     return  item.id === product.id ? {...item, qty: item.qty - 1} : item
                 })
             }
-
-            break;
-
         default : 
             return cart
     }   

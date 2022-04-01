@@ -20,3 +20,8 @@
 - thay thế useState cho những tác vụ lớn hơn
 
 # useContext
+
+# Skeleton - Loading
+
+# Redux-thunk 
+- Cho phép Dispatch các Action có đối số là 1 function chứ không nhất thiết phải là 1 Object

@@ -6,8 +6,13 @@ import Products from "./Components/Production/Products";
 import Product from "./Components/Production/Product";
 import Error from "./Components/Error/Error";
 import Cart from "./Components/Production/cart";
+import { getCate } from "./redux/action";
+import { useDispatch } from "react-redux"
 
 function App() {
+
+  const dispath = useDispatch()
+  dispath(getCate())
 
   return (
       <div>
