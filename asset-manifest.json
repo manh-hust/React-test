@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/React-test/static/css/main.4cec10f4.chunk.css",
+    "main.js": "/React-test/static/js/main.88e5750b.chunk.js",
+    "main.js.map": "/React-test/static/js/main.88e5750b.chunk.js.map",
+    "runtime-main.js": "/React-test/static/js/runtime-main.d722946e.js",
+    "runtime-main.js.map": "/React-test/static/js/runtime-main.d722946e.js.map",
+    "static/css/2.c5b8e1d6.chunk.css": "/React-test/static/css/2.c5b8e1d6.chunk.css",
+    "static/js/2.f60870ec.chunk.js": "/React-test/static/js/2.f60870ec.chunk.js",
+    "static/js/2.f60870ec.chunk.js.map": "/React-test/static/js/2.f60870ec.chunk.js.map",
+    "index.html": "/React-test/index.html",
+    "static/css/2.c5b8e1d6.chunk.css.map": "/React-test/static/css/2.c5b8e1d6.chunk.css.map",
+    "static/css/main.4cec10f4.chunk.css.map": "/React-test/static/css/main.4cec10f4.chunk.css.map",
+    "static/js/2.f60870ec.chunk.js.LICENSE.txt": "/React-test/static/js/2.f60870ec.chunk.js.LICENSE.txt",
+    "static/media/font-awesome.min.css": "/React-test/static/media/fontawesome-webfont.f691f37e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d722946e.js",
+    "static/css/2.c5b8e1d6.chunk.css",
+    "static/js/2.f60870ec.chunk.js",
+    "static/css/main.4cec10f4.chunk.css",
+    "static/js/main.88e5750b.chunk.js"
+  ]
+}
